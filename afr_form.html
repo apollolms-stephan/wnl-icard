@@ -2,10 +2,14 @@
 <head>
 <title>Woord en Lewe iKaart</title>
 <link rel="stylesheet" href="./css/style.css" type="text/css" />
+<link rel="stylesheet" href="./js/jqmobile/jquery.mobile-1.4.2.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script> 
+<script type="text/javascript" src="js/jqmobile/jquery.mobile-1.4.2.js"></script> 
+
 </head>
 <body>
 
-<form method="post" name="icard" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php"  onsubmit="window.location='done.html';">
+<form method="post" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php"  onsubmit="window.location='done.html';">
 <img class="brand_image" src="media/logo.png"/><br/>
 Naam:<br/>
 <input type="text" name="name" /><br/>
@@ -16,12 +20,12 @@ E-Pos:<br/>
 Ouderdom:<br/>
 <input type="text" name="age" /><br/>
 Huwelik Status:<br/>
-<div class="radio_inputs">
-<input type="radio" name="marital_status" value="Single" />Single<br/>
-<input type="radio" name="marital_status" value="Married" />Married<br/>
-<input type="radio" name="marital_status" value="Divorced" />Divorced<br/>
-<input type="radio" name="marital_status" value="Widowed" />Widowed<br/>
-</div>
+<fieldset data-role="controlgroup" data-type="horizontal">
+<label for="marstat1" ><input type="radio" name="marital_status" id="marstat1" value="Single" />Single</label>
+<input type="radio" name="marital_status" id="marstat2" value="Married" /><label for="marstat2" >Married</label>
+<input type="radio" name="marital_status" id="marstat3" value="Divorced" /><label for="marstat3" >Divorced</label>
+<input type="radio" name="marital_status" id="marstat4" value="Widowed" /><label for="marstat4" >Widowed</label>
+</fieldset>
 <br/>
 <input type="hidden" name="lang" value="Afr" /><br/>
 <br/>
