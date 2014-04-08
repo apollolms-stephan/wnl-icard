@@ -1,12 +1,27 @@
 form{
 	text-align: center;
-	width: 90%;
+	width: 100%;
+	max-width:320px;
 	margin-left:auto;
 	margin-right: auto;
 } 
+
+.centerfloat{
+	text-align: center;
+	width: 100%;
+	max-width:320px;
+	margin-left:auto;
+	margin-right: auto;
+
+}
 
 .brand_image{
 	height:50px; 
 	margin-left:auto;
 	margin-right:auto
+}
+
+.radio_inputs{
+	text-align: left;
+	margin-left:40%;
 }

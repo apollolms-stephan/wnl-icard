@@ -72,4 +72,7 @@
 	
 	// mail prayer
 	mail($prayer_to, "Prayer Request", $prayer_body, $headers);
-?> 
+?>
+
+Thank you!
+{insert redirect}
