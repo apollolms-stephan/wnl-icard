@@ -1,9 +1,12 @@
 <html>
 <head>
+<title>Woord en Lewe iKaart</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
-<img src="media/logo.png" height="25px"/>
-<form method="post" name="icard" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php" >
+
+<form method="post" name="icard" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php"  onsubmit="window.location='done.html';">
+<img class="brand_image" src="media/logo.png"/><br/>
 Name:<br/>
 <input type="text" name="name" /><br/>
 Contact Number:<br/>
@@ -13,14 +16,28 @@ E-Mail:<br/>
 Age:<br/>
 <input type="text" name="age" /><br/>
 Marital Status:<br/>
-<input type="text" name="marital_status" /><br/>
+<input type="radio" name="marital_status" value="Single" />Single<br/>
+<input type="radio" name="marital_status" value="Married" />Married<br/>
+<input type="radio" name="marital_status" value="Divorced" />Divorced<br/>
+<input type="radio" name="marital_status" value="Widowed" />Widowed<br/>
+<br/>
+Language Preference:<br/>
+<input type="radio" name="lang" value="Eng" />English<br/>
+<input type="radio" name="lang" value="Afr" />Afrikaans<br/>
+<br/>
 Request:<br/>
-<input type="text" name="request" /><br/>
+<input type="radio" name="request" value="req_acceptjesus"/>I want to accept Jesus in my life<br/>
+<input type="radio" name="request" value="req_newtoarea"/>I recently moved here<br/>
+<input type="radio" name="request" value="req_needspirithelp"/>I need spiritual help<br/>
+<input type="radio" name="request" value="req_detailschange"/>I want to update my details<br/>
+<input type="radio" name="request" value="req_newmember"/>I want to become a new member<br/>
+<input type="radio" name="request" value="req_newvolunteer"/>I want to volunteer<br/>
+<br/>
 Prayer Request:<br/>
 <textarea type="text" name="prayer_req"></textarea><br/>
 Praise Report:<br/>
 <textarea type="text" name="praise_rep"></textarea><br/>
-<input type="submit" value="submit" onclick="window.location='done.html';"/><br/>
+<input type="submit" value="Submit"/><br/>
 </form>
 </body>
 </html> 
