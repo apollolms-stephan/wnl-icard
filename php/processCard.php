@@ -55,7 +55,7 @@
 	if($p_email != ''){
 			$to = $p_email;
 	}else{
-			$to = "stephanp@woordenlewe.com"//"admin@woordenlewe.com";
+			$to = "stephanp@woordenlewe.com";//"admin@woordenlewe.com";
 	}
 
 	$prayer_to = "gebed@woordenlewe.com";
