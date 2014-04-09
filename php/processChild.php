@@ -8,7 +8,12 @@
 	$p_contact = makeSafe($_POST['contact']);
 	$p_email = makeSafe($_POST['email']);
 	
-	$filenames = array($_FILES['childphoto']['tmp_name']);
+	$target_path = 'images_child/';
+	$target_path .= basename($_FILES['childphoto']['name']);
+
+	move_uploaded_file($_FILES['childphoto']['tmp_name'], $target_path);
+
+	$filenames = array($target_path);
 	
 	$to = "stephanp@woordenlewe.com";
 	$subj = "iCard Child Dedication Test - Do not respond";
@@ -19,7 +24,7 @@
 	$msg .= "<p>Contact Number:<br/>$p_contact</p>";
 	$msg .= "<p>E-Mail</p>:<br/>$p_email</p>";
 	
-	$from = "wnl-icard@apollolms.co.za"
+	$from = "wnl-icard@apollolms.co.za";
 	
 	$stat = mail_withAttachments($to,$subj,$msg,$from,$filenames);
 	
@@ -28,5 +33,4 @@
 	}else{
 		echo 'Your request has been sent!';
 	}
-
 ?>
