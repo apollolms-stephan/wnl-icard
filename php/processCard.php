@@ -1,13 +1,15 @@
 <?php
-	$p_name = $_POST['name'];
-	$p_contact = $_POST['contact'];
-	$p_email = $_POST['email'];
-	$p_age = $_POST['age'];
-	$p_marital = $_POST['marital_status'];
-	$p_lang = $_POST['lang'];
-	$p_occupation = $_POST['occupation'];
+	include('func_security.php');
+
+	$p_name = makeSafe($_POST['name']);
+	$p_contact = makeSafe($_POST['contact']);
+	$p_email = makeSafe($_POST['email']);
+	$p_age = makeSafe($_POST['age']);
+	$p_marital = makeSafe($_POST['marital_status']);
+	$p_lang = makeSafe($_POST['lang']);
+	$p_occupation = makeSafe($_POST['occupation']);
 	
-	$p_reqtype = $_POST['request'];
+	$p_reqtype = makeSafe($_POST['request']);
 	
 	$p_reqtype_text = "";
 		if(isset($_POST['req_acceptjesus'])){
@@ -33,8 +35,8 @@
 		}
 	
 
-	$p_prayer = $_POST['prayer_req'];
-	$p_praise = $_POST['praise_rep'];
+	$p_prayer = makeSafe($_POST['prayer_req']);
+	$p_praise = makeSafe($_POST['praise_rep']);
 	
 	$body = "";
 	$body .= "Please follow up on this request:<br/>";
@@ -55,7 +57,7 @@
 	$prayer_body .= $p_prayer;
 	
 	if($p_email != ''){
-			$to = $p_email;
+			$to = makeSafe($p_email);
 	}else{
 			$to = "stephanp@woordenlewe.com";//"admin@woordenlewe.com";
 	}
@@ -76,5 +78,4 @@
 	mail($prayer_to, "Prayer Request", $prayer_body, $headers);
 ?>
 
-Thank you!
-{insert redirect}
+Thank you! Your request has been sent and we will respond as soon as possible.

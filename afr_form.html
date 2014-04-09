@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="./js/jqmobile/jquery.mobile-1.4.2.css" type="text/css" />
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script> 
 <script type="text/javascript" src="js/jqmobile/jquery.mobile-1.4.2.js"></script> 
+<script type="text/javascript" src="js/validate.js"></script> 
 
 </head>
 <body>
@@ -15,7 +16,8 @@ Naam:<br/>
 Kontak Nommer:<br/>
 <input type="text" name="contact" /><br/>
 E-Pos:<br/>
-<input type="text" name="email" /><br/>
+<input type="text" id="email" name="email" onkeydown="if(!isValidEmail(document.getElementById('email').value)){var elem = getElementById('emailValid'); elem.innerHTML = 'E-Mail doesn\'t appear valid...';}else{var elem = getElementById('emailValid'); elem.innerHTML = 'E-Mail seems valid!';}"/><br/>
+<div id="emailValid"></div>
 Ouderdom:<br/>
 <input type="text" name="age" /><br/>
 Beroep:<br/>
@@ -50,4 +52,4 @@ Dankbetuiging:<br/>
 <img class="brand_image" src="media/footer.png"/><br/>
 </form>
 </body>
-</html> 
+</html>

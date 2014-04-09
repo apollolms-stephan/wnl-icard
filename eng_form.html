@@ -14,7 +14,7 @@ Name:<br/>
 Contact Number:<br/>
 <input type="text" name="contact" /><br/>
 E-Mail:<br/>
-<input type="text" name="email" /><br/>
+<input type="text" name="email" onkeydown="if(!isValidEmail(document.getElementById('email').value)){var elem = getElementById('emailValid'); elem.innerHTML = 'E-Mail doesn\'t appear valid...';}else{var elem = getElementById('emailValid'); elem.innerHTML = 'E-Mail seems valid!';}"/><br/>
 Age:<br/>
 <input type="text" name="age" /><br/>
 Occupation:<br/>
