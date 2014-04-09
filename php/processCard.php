@@ -11,22 +11,22 @@
 	
 	$p_reqtype_text = "";
 		if(isset($_POST['req_acceptjesus'])){
-			$p_reqtype_text = "I want to accept Jesus into my life";
+			$p_reqtype_text .= "I want to accept Jesus into my life <br/>";
 		}
 		if(isset($_POST['req_newtoarea'])){
-			$p_reqtype_text = "I am new to the area";
+			$p_reqtype_text .= "I am new to the area <br/>";
 		}
 		if(isset($_POST['req_needspirithelp'])){
-			$p_reqtype_text = "I need spritirual help";
+			$p_reqtype_text .= "I need spritirual help <br/>";
 		}
 		if(isset($_POST['req_detailschange'])){
-			$p_reqtype_text = "My details have changed";
+			$p_reqtype_text .= "My details have changed <br/>";
 		}
 		if(isset($_POST['req_newmember'])){
-			$p_reqtype_text = "I want to become a new member";
+			$p_reqtype_text .= "I want to become a new member <br/>";
 		}
 		if(isset($_POST['req_newvolunteer'])){
-			$p_reqtype_text = "I want to become a volunteer";
+			$p_reqtype_text .= "I want to become a volunteer <br/>";
 		}
 	
 
