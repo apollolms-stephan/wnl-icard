@@ -28,6 +28,9 @@
 		if(isset($_POST['req_newvolunteer'])){
 			$p_reqtype_text .= "I want to become a volunteer <br/>";
 		}
+		if(isset($_POST['req_baptise'])){
+			$p_reqtype_text .= "I want to be baptisted <br/>";
+		}
 	
 
 	$p_prayer = $_POST['prayer_req'];

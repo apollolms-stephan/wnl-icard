@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Woord en Lewe iKaart</title>
+<link rel="stylesheet" href="./css/style.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script> 
+<link rel="stylesheet" href="./js/jqmobile/jquery.mobile-1.4.2.css" type="text/css" />
+<script type="text/javascript" src="js/jqmobile/jquery.mobile-1.4.2.js"></script> 
+</head>
+<body>
+<form method="post" name="icard" action="http://www.apollolms.co.za/wnl_icard/php/processChild.php"  onsubmit="window.location='done.html';">
+<img class="brand_image" src="media/logo.png"/><br/>
+Parent(s) Name(s):<br/>
+<input type="text" name="parent_name" /><br/>
+Child(ren) Name(s):<br/>
+<input type="text" name="child_name" /><br/>
+Contact Number:<br/>
+<input type="text" name="contact" /><br/>
+E-Mail:<br/>
+<input type="text" name="email" /><br/>
+Choose a picture to upload:<br/>
+<input type="file" name="childphoto" /><br/>
+
+<input type="submit" value="Submit"/><br/>
+<br/>
+<img class="brand_image" src="media/footer.png"/><br/>
+</form>
+</body>
+</html> 

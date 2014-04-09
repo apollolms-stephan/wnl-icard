@@ -16,7 +16,8 @@ form{
 }
 
 .brand_image{
-	height:50px; 
+	padding:15px;
+	width:300px; 
 	margin-left:auto;
 	margin-right:auto
 }
