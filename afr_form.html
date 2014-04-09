@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form method="post" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php"  onsubmit="window.location='done.html';">
+<form method="post" action="http://www.apollolms.co.za/wnl_icard/php/processCard.php">
 <img class="brand_image" src="media/logo.png"/><br/>
 Naam:<br/>
 <input type="text" name="name" /><br/>
@@ -17,8 +17,11 @@ Kontak Nommer:<br/>
 <input type="text" name="contact" /><br/>
 E-Pos:<br/>
 <input type="text" name="email" /><br/>
+
 Ouderdom:<br/>
 <input type="text" name="age" /><br/>
+Beroep:<br/>
+<input type="text" name="occupation" /><br/>
 Huwelik Status:<br/>
 <fieldset data-role="controlgroup" data-type="horizontal">
 <label for="marstat1" ><input type="radio" name="marital_status" id="marstat1" value="Single" />Single</label>
@@ -29,21 +32,21 @@ Huwelik Status:<br/>
 <br/>
 <input type="hidden" name="lang" value="Afr" /><br/>
 <br/>
-Request:<br/>
-<div class="radio_inputs">
-<input type="radio" name="request" value="req_acceptjesus"/>I want to accept Jesus in my life<br/>
-<input type="radio" name="request" value="req_newtoarea"/>I recently moved here<br/>
-<input type="radio" name="request" value="req_needspirithelp"/>I need spiritual help<br/>
-<input type="radio" name="request" value="req_detailschange"/>I want to update my details<br/>
-<input type="radio" name="request" value="req_newmember"/>I want to become a new member<br/>
-<input type="radio" name="request" value="req_newvolunteer"/>I want to volunteer<br/>
-</div>
+Navraag:<br/>
+<fieldset data-role="controlgroup">
+<label for="acceptjesus"><input type="checkbox" id="acceptjesus" name="req_acceptjesus" />I want to accept Jesus in my life</label>
+<label for="newtoarea"><input type="checkbox" id="newtoarea" name="req_newtoarea"/>I recently moved here</label>
+<label for="needspirithelp"><input type="checkbox" id="needspirithelp" name="req_needspirithelp" />I need spiritual help</label>
+<label for="detailschange"><input type="checkbox"id="detailschange"  name="req_detailschange" />I want to update my details</label>
+<label for="newmember"><input type="checkbox" id="newmember" name="req_newmember" />I want to become a new member</label>
+<label for="newvolunteer"><input type="checkbox" id="newvolunteer" name="req_newvolunteer"/>I want to volunteer</label>
+</fieldset>
 <br/>
-Prayer Request:<br/>
+Gebedsversoek:<br/>
 <textarea type="text" name="prayer_req"></textarea><br/>
-Praise Report:<br/>
+priasereport?:<br/>
 <textarea type="text" name="praise_rep"></textarea><br/>
-<input type="submit" value="Submit"/><br/>
+<input type="submit" value="Submit" /><br/>
 </form>
 </body>
 </html> 
