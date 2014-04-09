@@ -5,30 +5,30 @@
 	$p_age = $_POST['age'];
 	$p_marital = $_POST['marital_status'];
 	$p_lang = $_POST['lang'];
-	$p_occupation = $_POST['occupation']
+	$p_occupation = $_POST['occupation'];
 	
 	$p_reqtype = $_POST['request'];
 	
 	$p_reqtype_text = "";
-		if(isset($_POST'req_acceptjesus')){
+		if(isset($_POST['req_acceptjesus'])){
 			$p_reqtype_text = "I want to accept Jesus into my life";
 		}
-		if(isset($_POST'req_newtoarea')){
+		if(isset($_POST['req_newtoarea'])){
 			$p_reqtype_text = "I am new to the area";
 		}
-		if(isset($_POST'req_needspirithelp')){
+		if(isset($_POST['req_needspirithelp'])){
 			$p_reqtype_text = "I need spritirual help";
 		}
-		if(isset($_POST'req_detailschange')){
+		if(isset($_POST['req_detailschange'])){
 			$p_reqtype_text = "My details have changed";
 		}
-		if(isset($_POST'req_newmember')){
+		if(isset($_POST['req_newmember'])){
 			$p_reqtype_text = "I want to become a new member";
 		}
-		if(isset($_POST'req_newvolunteer')){
+		if(isset($_POST['req_newvolunteer'])){
 			$p_reqtype_text = "I want to become a volunteer";
 		}
-	}
+	
 
 	$p_prayer = $_POST['prayer_req'];
 	$p_praise = $_POST['praise_rep'];
@@ -42,7 +42,8 @@
 	$body .= "Marital Status: $p_marital<br/>";
 	$body .= "Request: $p_reqtype_text<br/>";
 	$body .= "Language Preference: $p_lang<br/>";
-	//$body .= "Prayer Request: $p_prayer<br/>";
+	$body .= "Occupation: $p_occupation<br/>";
+	$body .= "Prayer Request: $p_prayer<br/>";
 	$body .= "Praise Report: $p_praise<br/>";
 	$body .= "</p>";
 	
