@@ -8,8 +8,11 @@
 	$p_contact = makeSafe($_POST['contact']);
 	$p_email = makeSafe($_POST['email']);
 	
-	$target_path = 'images_child/';
+	$target_path = "images_child/";
 	$target_path .= basename($_FILES['childphoto']['name']);
+
+	var_dump($_FILES);
+	var_dump($_FILE);
 
 	move_uploaded_file($_FILES['childphoto']['tmp_name'], $target_path);
 
