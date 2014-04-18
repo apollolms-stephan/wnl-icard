@@ -1,5 +1,5 @@
 function onDeviceReady() {
-        document.addEventListener("backbutton", backKeyDown, true);
+       // document.addEventListener("backbutton", backKeyDown, true);
         console.log("PhoneGap is ready");
     }
 

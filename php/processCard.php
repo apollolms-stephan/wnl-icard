@@ -34,7 +34,6 @@
 			$p_reqtype_text .= "I want to be baptisted <br/>";
 		}
 	
-
 	$p_prayer = makeSafe($_POST['prayer_req']);
 	$p_praise = makeSafe($_POST['praise_rep']);
 	
@@ -75,7 +74,9 @@
 	mail($to, $subj, $body, $headers);
 	
 	// mail prayer
-	mail($prayer_to, "Prayer Request", $prayer_body, $headers);
+	if($p_prayer != ""){
+		mail($prayer_to, "Prayer Request", $prayer_body, $headers);
+	}
 ?>
 
 Thank you! Your request has been sent and we will respond as soon as possible.
